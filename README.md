@@ -28,7 +28,7 @@ import { action, observable, runInAction } from 'mobx'
 export class ToastStore {
   @observable notification = {}
 
-  @action setNotification(notification ) {
+  @action setNotification(notification) {
     this.notification = notification
 
     setTimeout(() => {
