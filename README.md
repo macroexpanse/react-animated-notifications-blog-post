@@ -364,7 +364,7 @@ The second change is the use of [requestAnimationFrame](https://developer.mozill
 >
 > You should call this method whenever you're ready to update your animation onscreen. This will request that your animation function be called before the browser performs the next repaint. The number of callbacks is usually 60 times per second, but will generally match the display refresh rate in most web browsers as per W3C recommendation. requestAnimationFrame() calls are paused in most browsers when running in background tabs or hidden `<iframes>` in order to improve performance and battery life.
 
-After several iterations we've arrived at a clean, decoupled solution for generating animated toast notifications. You can find the finished example here: *GITHUB LINK GOES HERE*.
+After several iterations we've arrived at a clean, decoupled solution for generating animated toast notifications. You can find the finished example here: https://github.com/macroexpanse/react-animated-notifications-blog-post
 
 ## Things to add?
 
