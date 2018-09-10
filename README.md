@@ -166,7 +166,8 @@ For error notifications we don't display the checkmark icon. We'll need to add s
  @inject('toastStore') @observer
  export class ToastNotification extends React.Component {
    render() {
-     const { toastStore: { notification }, channels } = this.props
+-    const { toastStore: { notification } } = this.props
++    const { toastStore: { notifications }, channels } = this.props
 
 +    const channel = channels.find((channel) => notifications.has(channel)),
 +          notification = notifications.get(channel)
@@ -272,8 +273,8 @@ Let's start with the `ToastNotification` component. You may be tempted to hand r
   @inject('toastStore') @observer
   export class ToastNotification extends React.Component {
     render() {
--     const { toastStore: { notification }, channels } = this.props
-+     const { toastStore: { notification, animationDuration }, channels } = this.props
+-     const { toastStore: { notifications }, channels } = this.props
++     const { toastStore: { notifications, animationDuration }, channels } = this.props
 
       const channel = channels.find((channel) => notifications.has(channel)),
             notification = notifications.get(channel)
