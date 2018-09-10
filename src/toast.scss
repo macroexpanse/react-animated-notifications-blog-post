@@ -1,0 +1,41 @@
+.toast-container {
+  position: relative;
+}
+
+.toast-notification {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toast-notification > .fa-check {
+  font-size: 20px;
+}
+
+.toast-notification > .message-container {
+  font-size: 16px;
+  line-height: 1.38;
+  letter-spacing: 0.6px;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+$use-slideInDown: true;
+$use-slideOutUp: true;
+
+@import "../../node_modules/animate-sass/animate";
+
+.toast-notification-enter {
+  @extend .animated, .slideInDown;
+}
+
+.toast-notification-leave {
+  @extend .animated, .slideOutUp;
+}
+
