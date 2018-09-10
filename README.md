@@ -181,6 +181,7 @@ For error notifications we don't display the checkmark icon. We'll need to add s
                  color: notification.textColor,
                  backgroundColor: notification.backgroundColor
                } }>
+-              <i className="fa fa-check" />
 +              { channel !== toastStore.ERROR && <i className="fa fa-check" /> }
                <div className="message-container">
                  <span className="message">{ notification.message }</span>
